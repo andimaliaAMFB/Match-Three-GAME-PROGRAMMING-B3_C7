@@ -57,7 +57,7 @@ public class AchievementSystem : Observer
             candyEvent.OnMatch();
             if (candyEvent.AchievementCompleted())
             {
-                key = "Match 5 cady";
+                key = "Match 5 candy";
                 NotifyAchievement(key, value);
             }
         }

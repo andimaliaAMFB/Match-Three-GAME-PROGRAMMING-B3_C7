@@ -15,10 +15,14 @@ public class Grid : MonoBehaviour
     public GameObject[,] tiles;
     public GameObject[] candies;
 
+    int gameCombo;
+
+
     //Start is called before the first fram update
     void Start()
     {
         CreateGrid();
+        gameCombo = 1;
     }
 
     void CreateGrid()
@@ -102,7 +106,13 @@ public class Grid : MonoBehaviour
             GameObject gm = tiles[column, row];
             gm.SetActive(false);
             tiles[column, row] = null;
+            gameCombo++;
         }
+        else
+        {
+            gameCombo = 1;
+        }
+        GameManager.instance.startCombo(gameCombo);
     }
 
     public void DestroyMatches()

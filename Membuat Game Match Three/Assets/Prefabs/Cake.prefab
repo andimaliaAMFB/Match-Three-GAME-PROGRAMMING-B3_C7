@@ -125,6 +125,9 @@ MonoBehaviour:
   column: 0
   row: 0
   isMatched: 0
+  combo: 0
+  gameCombo: 0
+  GMscrip: {fileID: 0}
 --- !u!114 &4978885180896154591
 MonoBehaviour:
   m_ObjectHideFlags: 0
